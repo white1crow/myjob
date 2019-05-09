@@ -1,0 +1,22 @@
+<ul>
+    {{each films Msg1}}
+        <li>
+            <div class="li_left">
+                <img src="{{Msg1.poster}}"/>
+            </div>
+            <div class="li_right">
+                <div class="txt">
+                    <p>{{Msg1.name}}<span>{{Msg1.filmType.name}}</span></p>
+                    <p>观众评分<span>{{Msg1.grade}}</span></p>
+               
+                <p>主演: {{each Msg1.actors namelist}}{{namelist.name}}{{/each}}</p>
+                
+                    <p><span>{{Msg1.nation}}</span> | <span>{{Msg1.runtime}}</span>分钟</p>
+                </div>
+                <div class="btn">
+                    <span>购票</span>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
